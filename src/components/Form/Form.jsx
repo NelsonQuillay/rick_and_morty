@@ -3,7 +3,9 @@ import validation from "../Validation/Validation"
 
 const Form = ({login}) => {
 
-    const [errors, setErrors] = useState ({})
+    const [errors, setErrors] = useState ({
+
+    })
 
     const [userData, setUserData] = useState ({
         email:'',
@@ -19,6 +21,7 @@ const Form = ({login}) => {
             ...userData,
             [event.target.name]: event.target.value  
         }))
+        // validation({...userData, [event.target.name] : event.target.value}, errors, setErrors);
     }
 
     const handleSubmit = (event) => {
@@ -27,7 +30,7 @@ const Form = ({login}) => {
     }
 
     return (
-        <form onSubmit={{handleSubmit}}>
+        <form onSubmit={handleSubmit}>
             <label htmlFor="email">Email</label>
             <input type="email" name='email' value={userData.email} onChange={handleChange}/>
             {errors.email && <p>{errors.email}</p>}

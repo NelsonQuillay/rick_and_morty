@@ -12,8 +12,8 @@
 }
 
 body{
-    background: url('./components/Imagen/GIF.gif');
-    background-size: cover;
+    background: url('./components/Imagen/Fondo1.jpg');
+    background-size: auto;
     width: 100%;
     background-position: center center ;
 }

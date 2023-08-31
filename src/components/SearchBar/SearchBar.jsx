@@ -1,4 +1,5 @@
 import { useState } from "react";
+import style from './SearchBar.module.css'
 
 export default function SearchBar({onSearch}) {
    
@@ -9,7 +10,7 @@ export default function SearchBar({onSearch}) {
    }
 
    return (
-      <div>
+      <div className={style.contenedor}>
          <input type='search' onChange={handleChange} value={id} />
          <button onClick={() => {onSearch(id); setId('')}}>Agregar</button> {/*onsearch agrega el personaje y setId me elimina el id del input para que usuario agrege otro id */}
       </div>

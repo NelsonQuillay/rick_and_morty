@@ -1,5 +1,6 @@
 import SearchBar from "../SearchBar/SearchBar"
-import {Link,} from 'react-router-dom'
+import {Link} from 'react-router-dom'
+import style from './Nav.module.css'
 
 const Nav = ({onSearch, setAccess}) => {
 
@@ -8,7 +9,7 @@ const Nav = ({onSearch, setAccess}) => {
 
     }
     return(
-            <nav>
+            <nav className={style.nav}>
                 <button><Link to='/about'>About</Link></button>
                 <button><Link to='/home'>Home</Link></button>
                 <button><Link to='/favorites'>Favorites</Link></button>

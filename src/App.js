@@ -55,10 +55,10 @@ function App() {
    return (
       <div className={style.App}>
          {
-            location.pathname !== '/' && <Nav onSearch={onSearch}/>   
+            location.pathname !== '/' && <Nav onSearch={onSearch} setAccess={setAccess}/>   
          }
          <Routes>
-            <Route path='/home' element={<Cards characters={characters} onClose={onClose} setAccess={setAccess} />}/>                 
+            <Route path='/home' element={<Cards characters={characters} onClose={onClose}  />}/>                 
             <Route path='/about' element={<About/>}/>            
             <Route path='/detail/:id' element={<Detail/>}/> 
             <Route path='/' element={<Form login={login}/>}/>
