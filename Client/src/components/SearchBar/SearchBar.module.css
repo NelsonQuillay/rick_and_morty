@@ -1,0 +1,9 @@
+.contenedor {
+    display: flex;
+    position: relative;
+    top: 0;
+    background-color: #49c773;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
